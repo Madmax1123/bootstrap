@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+                <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nota1</th>
+      <th scope="col">Nota2</th>
+      <th scope="col">Nota3</th>
+      <th scope="col">Nota4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ form.nota1 }}</td>
+      <td>{{ form.nota2 }}</td>
+      <td>{{ form.nota3 }}</td>
+      <td>{{ form.nota4 }}</td>
+    </tr>
+  </tbody>
+    </table>
+    </div>
+        <button type="submit" value="Salvar" class="btn btn-outline-dark">Salvar</button>
+    </form>
+ {% endblock %}
